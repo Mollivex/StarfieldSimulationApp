@@ -53,6 +53,8 @@ namespace StarfieldSimulationApp
                     Z = random.Next(1, pictureBox1.Width),
                 };
             }
+            // Initialize timer activity
+            timer1.Start();
         }
     }
 }
