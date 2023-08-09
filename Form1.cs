@@ -36,9 +36,15 @@ namespace StarfieldSimulationApp
             foreach(var star in stars)
             {
                 DrawStar(star);
+                MoveStar(star);
             }
 
             pictureBox1.Refresh();
+        }
+
+        private void MoveStar(Star star)
+        {
+            star.Z -= 30;
         }
 
         /// <summary>
