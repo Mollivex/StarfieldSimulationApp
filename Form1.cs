@@ -53,7 +53,7 @@ namespace StarfieldSimulationApp
 
             float y = Map(star.Y / star.Z, 0, 1, 0, pictureBox1.Height) + pictureBox1.Height / 2;
 
-            //graphics.FillEllipse(Brushes.GreenYellow, )
+            graphics.FillEllipse(Brushes.GreenYellow, x, y, starSize, starSize);
         }
 
         /// <summary>
