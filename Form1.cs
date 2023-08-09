@@ -12,6 +12,15 @@ namespace StarfieldSimulationApp
 {
     public partial class Form1 : Form
     {
+        // Create Star[] array instance
+        private Star[] star = new Star[15000];
+
+        // Create Random generator instance
+        private Random random = new Random();
+
+        // Create Graphics GDI+ drawing surface instance
+        private Graphics graphics;
+
         public Form1()
         {
             InitializeComponent();
