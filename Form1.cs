@@ -44,7 +44,8 @@ namespace StarfieldSimulationApp
 
         private void MoveStar(Star star)
         {
-            star.Z -= 30;
+            // Stars movement speed
+            star.Z -= 10;
             if(star.Z < 1)
             {
                 star.X = random.Next(-pictureBox1.Width, pictureBox1.Width);
@@ -59,7 +60,7 @@ namespace StarfieldSimulationApp
         /// <param name="star"></param>
         private void DrawStar(Star star)
         {
-            float starSize = 7;
+            float starSize = Map(star.Z, 0, pictureBox1.Width, 10, 0); ;
 
             float x = Map(star.X / star.Z, 0, 1, 0, pictureBox1.Width) + pictureBox1.Width / 2;
 
