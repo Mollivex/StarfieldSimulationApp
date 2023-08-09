@@ -45,6 +45,12 @@ namespace StarfieldSimulationApp
         private void MoveStar(Star star)
         {
             star.Z -= 30;
+            if(star.Z < 1)
+            {
+                star.X = random.Next(-pictureBox1.Width, pictureBox1.Width);
+                star.Y = random.Next(-pictureBox1.Height, pictureBox1.Height);
+                star.Z = random.Next(1, pictureBox1.Width);
+            }
         }
 
         /// <summary>
