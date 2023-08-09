@@ -38,7 +38,21 @@ namespace StarfieldSimulationApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Create new Bitmap instance
+            pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 
+            graphics = Graphics.FromImage(pictureBox1.Image);
+
+            // Initialize random coordinate place star
+            for (int i = 0; i < star.Length; i++)
+            {
+                star[i] = new Star()
+                {
+                    X = random.Next(-pictureBox1.Width, pictureBox1.Width),
+                    Y = random.Next(-pictureBox1.Height, pictureBox1.Height),
+                    Z = random.Next(1, pictureBox1.Width),
+                };
+            }
         }
     }
 }
